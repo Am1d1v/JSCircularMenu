@@ -27,7 +27,46 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: red;
+}
+.container.active .toggle {
+  transform: rotate(45deg);
+}
+.container.active .menu li a {
+  top: 10%;
+  transform: translate(-50%, -50%) rotate(calc(-60deg * var(--i)));
+}
+.container .menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .menu li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: rotate(calc(60deg * var(--i)));
+}
+.container .menu li a {
+  width: 55px;
+  height: 55px;
+  color: #222;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: visible;
+  transition: 0.3s;
 }
 
 .toggle {
